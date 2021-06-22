@@ -1,0 +1,180 @@
+/* https://webmaster.kitchen/css-flexbox-nedir-nasil-kullanilir/ */
+
+body {
+    margin:0%;
+    padding: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menu_bar {
+    height: 80px;
+    width: 100%;
+    background-color: #073f68;
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-around;  /* hizalama kısmı center,flex-end gibi  iki yana boşlukla hizalıyor*/
+}
+
+.logo { margin-top: -20px;}
+.logo {
+    height: 100px;
+    
+}
+.menu ul li{
+    list-style-type: none; /* liste sitilini yok saydık */
+    display: inline-block; /* liste alt altaydı tek satıra geçti*/
+    padding: 5px;
+    margin: 5px;
+}
+.menu a {
+    color:white;
+    font-size: 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 1px solid white;
+    padding: 10px;
+    transition: 0.5s; /* efekt 0.5 saniyede oluşacak*/
+}
+.menu li:hover a{ /* buton üzerine gelince olusacak efekt  */
+    color : #073f68;
+    background-color: white;
+}
+.menu i{display: none;} /* menu simgesi ilk seferde görünmez kılıyor piksel düştükçe mobil kısımda görünmesi için media kısmında yazacaz */
+
+.galeri {
+    background:url("resim.jpg");
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-size:cover ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.galeri .web {
+    color: white;
+    font-family: calibri;
+    font-size:30px;
+}
+.galeri a {
+    font-family: calibri;
+    color:white;
+    font-size: 20px;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 1px solid white;
+    background-color: rgba(red, 225, 225, 0.5); /* 0.5 opaklık */
+    transition: 0.5s;
+    padding: 10px 30px;
+}
+.galeri a:hover{
+    color:#073f68;
+    background-color: white;
+    padding: 10px 10px;
+}
+
+/*  ------------------------------------- ORTA ALAN */
+
+
+.orta_alan {
+    display: flex;
+    width: 95%;   
+    justify-content: space-around; 
+}
+.orta {
+    width: 22%;
+    border: 2px solid gray;
+    border-radius: 15px;
+    margin: 2% 0;
+    box-sizing: border-box;
+    
+}
+.orta .icerik {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    text-align: justify;
+}
+.orta p {
+    text-indent: 15px; /* paragraf başına girinti olusturuyor*/
+}
+.orta img{ width: 50%;}
+
+
+/* ALT ALAN */
+
+.alt_alan {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 15px;
+    justify-content: space-around; 
+    background-color: #073f68;
+    color:white;
+}
+.alt_alan .icerik {
+    width: 33%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+.alt_alan .sosyal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 40px;
+    border-top: 1px solid white;
+}
+.sosyal a{
+    margin: 10px;
+    color: white;
+    
+}
+
+/* TABLET görünüm */
+
+
+@media only screen and (max-width:992px){/* ekran 992px boyutuna düştüğünde çalışacak*/ 
+    .orta_alan {flex-wrap: wrap;} /* flex wrap özelliği taşan kısım aşağı düşmesini sağlıyor */ 
+    .orta {width: 48%;}
+    .orta img{width: 30%;}
+}
+/* Mobil görünüm */
+@media only screen and (max-width:768px){/* ekran 768px boyutuna düştüğünde çalışacak*/ 
+    /* menu responsive tasarım */
+    .menu ul{ display: none;} /* belirtilen piksele düştüğünde flex özelliğini kaybedecek*/
+    .menu_bar .logo{margin-left: 10%;}
+    .menu_bar .menu{margin-right: 10%;}
+    .menu i{display: block;}
+    .menu_bar{justify-content: space-between;} /* mobil boyutta iki yana yaslama*/
+    .menu ul{display: none;}
+    .menu i{display: block;
+            font-size: 30px;
+            color:white;
+            cursor: pointer;
+            padding: 5px;
+            border:1px solid white;
+            border-radius: 15%; /* border köşelerine ovallık veriyor*/
+            margin-top: 50%;
+    }
+    /* orta alan responsive tasarım */
+    .orta{width: 100%;}
+    .orta .icerik{flex-direction: row;} /* row ve column olarak deneyiniz ve farkı görünüz*/
+    .icerik img,h3,p{padding: 1%;}
+
+
+    /* alt alan responsive tasarım */
+    
+    .alt_alan .icerik{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center; /* dikey hizalama*/
+        align-items: center;/* yatay hizalama*/
+    }
+}

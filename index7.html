@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form action="#">
+            <label>Mesajınız:</label><br>
+            <textarea name="message" cols="45" rows="4" readonly>Buraya yazılanları sadece okuyabilirsiniz!</textarea><br>
+            <p>Bildiğiniz teknoloji dillerini işaretleyiniz...</p>
+            <input type="checkbox" checked> C <br>
+            <input type="checkbox"> C++ <br>
+            <input type="checkbox"> C# <br>
+            <input type="checkbox"> Java <br>
+            <input type="checkbox" checked> PHP <br>
+            <input type="checkbox"> ASP.NET <br>
+            <input type="checkbox" checked> Python <br>
+            <p>Tuttuğunuz Takım:</p>
+            <input type="radio" name="takim" value="1" checked> Galatasaray <br>
+            <input type="radio" name="takim" value="2"> Beşiktaş <br>
+            <input type="radio" name="takim" value="3"> Fenerbahçe <br>
+            <input type="radio" name="takim" value="4"> Trabzonspor <br>
+            <p>Burcunuz:</p>
+            <select name="burc" size="6">
+                <option value="1"> Koç </option>
+                <option value="2"> Boğa </option>
+                <option value="3"> İkizler </option>
+                <option value="4"> Yengeç </option>
+                <option value="5"> Aslan </option>
+                <option value="6"> Başak </option>
+                <option value="7"> Terazi </option>
+                <option value="8"> Akrep </option>
+                <option value="9"> Yay </option>
+                <option value="10"> Oğlak </option>
+                <option value="11" selected> Kova </option>
+                <option value="12"> Balık </option>
+            </select>
+            <br><br>
+            <select>
+                <optgroup label="Programalama Dilleri">
+                    <option value="1"> C++ </option>
+                    <option value="2"> C# </option>
+                    <option value="3"> Java </option>
+                </optgroup>
+                <optgroup label="Veri Tabanları">
+                    <option value="4"> MySQL </option>
+                    <option value="5"> SQL Server </option>
+                    <option value="6"> Oracle </option>
+                </optgroup>
+            </select>
+            <br><br>
+            <fieldset>
+                <legend><i>Programalama Dilleri</i></legend>
+                <label><input type="checkbox" name="radAnswer" value="1"> C </label><br>
+                <label><input type="checkbox" name="radAnswer" value="2"> C++ </label><br>
+                <label><input type="checkbox" name="radAnswer" value="3"> C# </label><br>
+                <label><input type="checkbox" name="radAnswer" value="4"> Java </label><br>
+            </fieldset>
+            <br><br>
+            <table>
+                <tr>
+                    <td align="center" colspan="2" height="30">Kullanıcı Girişi </td>
+                </tr>
+                <tr>
+                    <td> Kullanıcı Adı: </td>
+                    <td><input type="text" name="username"> </td>
+                </tr>
+                <tr>
+                    <td> Şifre: </td>
+                    <td><input type="password" name="password"> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td>
+                        <input type="submit" value="Giriş yap">
+                        <input type="reset" value="Temizle">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

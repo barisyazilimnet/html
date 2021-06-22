@@ -1,0 +1,57 @@
+<html>
+<body>
+<form name="kayit" method="post/get" action="sayfa.php" enctype="multipart/form-data">
+<fieldset>
+<label>Adınız:</label>
+<br>
+<input type="text" name="ad" placeholder="lütfen buraya adınızı giriniz" size="28"></input>
+<br>
+<br>
+<label>Soyadınız:</label>
+<br>
+<input type="text" name="soyad" readonly></input>
+<br>
+<br>
+<label>TC No Giriniz:</label>
+<br>
+<input type="text" name="tcno" maxlength="11" disabled></input>
+<br>
+<br>
+<label>Sahip Olduğunuz Eşyalar:</label>
+<br>
+<input type="checkbox" name="hangisinesahipsin" value="1">Bilgisayar</input>
+<input type="checkbox" name="hangisinesahipsin2" value="2">Telefon</input>
+<input type="checkbox" name="hangisinesahipsin3" value="3">Tablet</input>
+</fieldest>
+<br>
+<fieldest>
+<label>Cinsiyetiniz:</label>
+<br>
+<input type="radio" name="cinsiyet" value="1">Kadın</input>
+<input type="radio" name="cinsiyet" value="2">Erkek</input>
+<input type="radio" name="cinsiyet" value="3">Diğer</input>
+<br>
+<br>
+<label>Kendinizi Tanıtınız:</label>
+<br>
+<textarea type="kendindenbahset" placeholder="Kendini tanıt..." rows="7" cols="61"></textarea>
+<br>
+<br>
+<label>Doğum yeriniz:</label>
+<br>
+<select name="nerelisin">
+<option value="46">Kahramanmaraş</option>
+<option value="34">İstanbul</option>
+<option value="06">Ankara</option>
+<option value="61">Trabzon</option>
+</select>
+<br>
+<br>
+<input type="password" name="sifre"></input>
+<br>
+<br>
+<input type="submit" value="Gönder"></input>
+</fieldset>
+</form>
+</body>
+</html>
